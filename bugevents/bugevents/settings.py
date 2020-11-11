@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'eventos',
+    'configuracion',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'bugevents.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/HECTOR/Documents/ProyectoIS/bugevents/eventos/templates"],
+        'DIRS': ["C:/Users/HECTOR/Documents/ProyectoIS/bugevents/configuracion/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,7 +112,6 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
