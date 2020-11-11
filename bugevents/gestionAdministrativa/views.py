@@ -5,13 +5,7 @@ from django.views import View
 # Create your views here.
 
 
-class ControlAmbiente(View):
+class ControlUsuario(View):
 
     def get(self, request):
-        return render(request, "configuracion/templates/ambiente/ambiente.html")
-
-
-
-
-
-
+        return render(request, "gestionAdministrativa/templates/login.html")

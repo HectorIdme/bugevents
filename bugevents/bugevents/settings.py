@@ -55,7 +55,7 @@ ROOT_URLCONF = 'bugevents.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/HECTOR/Documents/ProyectoIS/bugevents/configuracion/templates"],
+        'DIRS': ["C:/Users/HECTOR/Documents/ProyectoIS/bugevents"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +118,5 @@ USE_L10N = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = ["C:/Users/HECTOR/Documents/ProyectoIS/bugevents"]

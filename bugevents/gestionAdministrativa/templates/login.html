@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugevents - Sistema Gestión de Eventos</title>
+    {% load static %}
+    <link href="{% static 'gestionAdministrativa/static/login.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(39, 117, 151);">
+
+    <div class="columna">
+        <div class="texto titulo">Administración de Bugevents</div>
+            <div class="caja">
+            <form class="texto formulario" action="">
+                <div class="entrada">
+                <div><span class="entrada_descrip">Usuario:</span> <input class="texto nombre" type="text"></div>
+                <div><span class="entrada_descrip">Contraseña:</span> <input class="texto aforo" type="text"></div>
+                </div>
+                <div class="botones">
+                <div><button class="texto boton" type="submit">Entrar</button></div>
+                <div class="recuperarContra"><a href="#">¿Olvidaste tu contraseña?</a></div>
+                </div>
+            </form>
+            </div>
+    </div>
+
+</body>
+</html>

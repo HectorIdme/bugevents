@@ -1,0 +1,78 @@
+.caja{
+    background:rgb(196, 196, 196);
+    border-radius: 30px;
+    padding: 0px 50px;
+}
+
+a{
+    text-decoration: none;
+    color:blue;
+}
+
+a:hover{
+    color: rgb(123, 165, 233);
+}
+
+.texto{
+    color: white;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 15px 100px;
+}
+
+.titulo{
+    margin-bottom: 50px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.columna{
+    padding: 20px 700px;
+    margin: 100px;
+}
+
+
+.entrada{
+    color:black;
+}
+
+.entrada_descrip{
+    float:left;
+    margin-top: 50px;
+    width: 100px;
+}
+
+.botones{
+    margin-top: 50px;
+}
+
+
+button{
+    background: blue;
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px !important;
+    border-color: blue;
+}
+
+button:hover{
+    background-color: rgb(57, 116, 213);
+    border-color: rgb(57, 116, 213);
+}
+
+input{
+    color:black !important;
+    background: white;
+    width: 80% !important;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: white;
+}
+
+.recuperarContra{
+    margin-top: 30px;
+    margin-left: 70%;
+    padding: 20px 0px;
+
+}
