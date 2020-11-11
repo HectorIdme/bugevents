@@ -1,0 +1,81 @@
+.topadmin,.topnav{
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.topadmin{
+    background-color: rgb(65, 118, 144);
+}
+
+.topnav{
+    background-color: rgb(121, 174, 200);
+}
+
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    color: black;
+}
+
+.texto{
+    color: white;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px 100px;
+}
+
+.titulo{
+    margin:auto;
+    width: 50%;
+    padding: 30px;
+    font-size: 45px;
+}
+
+.columna{
+    float:left;
+}
+
+.uno{
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+.entrada_descrip{
+    float:left;
+    margin-top: 40px;
+    width: 100px;
+}
+
+.botones{
+    margin-top: 50px;
+}
+
+
+button{
+    background: blue;
+    border-radius: 15px;
+    margin:100px 70px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px !important;
+    border-color: blue;
+}
+
+button:hover{
+    background-color: rgb(57, 116, 213);
+    border-color: rgb(57, 116, 213);
+}
+
+input{
+    color:black !important;
+    background: rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
+    width: 60%;
+    padding: 10px;
+}

@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ambiente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugevents - Sistema Gestión de Eventos</title>
+    {% load static %}
+    <link href="{% static 'ambiente.css' %}" type="text/css" rel="stylesheet">
 </head>
-<body>
-<p>AMBIENTES</p>
-<ul><li>Ambiente01</li><li>Ambiente02</li></ul>
-<button type="submit">Aniadir Ambientes</button>
+<body style="background-color: rgb(39, 117, 151);">
+    <div class="topadmin"><p>Administración de Bugevents</p></div>
+    <div class="topnav direccion"><p><a href="#">admin</a>/<a href="#">admin02</a></p></div>
+
+    <div class="columna uno">
+    <div class="texto titulo">Nuevo Ambiente</div>
+    <div class="texto descripcion">Ingrese los datos del Ambiente:</div>
+    <form class="texto formulario" action="">
+        <div class="entrada">
+        <div><span class="entrada_descrip">Nombre:</span> <input class="texto nombre" type="text"></div>
+        <div><span class="entrada_descrip">Ubicación:</span> <input class="texto ubicacion" type="text"></div>
+        <div><span class="entrada_descrip">Aforo:</span> <input class="texto aforo" type="text"></div>
+        </div>
+        <div class="botones">
+        <span><button class="texto boton cancelar" type="submit">Cancelar</button></span>
+        <span><button class="texto boton crear" type="submit">Crear</button></span>
+        </div>
+    </form>
+    </div>
+
+    <div class="columna dos">
+
+    </div>
+
 </body>
 </html>

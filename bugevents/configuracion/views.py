@@ -5,15 +5,10 @@ from django.views import View
 # Create your views here.
 
 
-def saludo(request):
-    return render(request, "/ambiente/ambiente.html")
-
-
-class GreetingView(View):
-    greeting = "Good day"
+class ControlAmbiente(View):
 
     def get(self, request):
-        return HttpResponse(self.greeting)
+        return render(request, "ambiente/ambiente.html")
 
 
 

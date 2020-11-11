@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from eventos.views import saludo, GreetingView
+
+from configuracion.views import ControlAmbiente
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludo/', saludo),
-    path('greeting/', GreetingView.as_view()),
+    path('crearambiente/', ControlAmbiente.as_view()),
 ]
 
 admin.site.site_header = "Administración de Bugevents"
