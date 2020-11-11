@@ -55,7 +55,7 @@ ROOT_URLCONF = 'bugevents.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/HECTOR/Documents/ProyectoIS/bugevents/eventos/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
