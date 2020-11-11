@@ -1,0 +1,67 @@
+.caja{
+    background:rgb(196, 196, 196);
+    border-radius: 30px;
+    padding: 0px 50px;
+}
+
+
+.texto{
+    color: white;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titulo{
+    margin-bottom: 50px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.columna{
+    padding: 20px 700px;
+    margin: 100px;
+}
+
+
+.descrip{
+    color:black;
+    margin-left: 250px;
+    padding: 30px 0px;
+}
+
+
+
+.botones{
+    padding: 20px;
+}
+
+
+button{
+    background: blue;
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+    margin-left: 100px;
+    font-size: 20px !important;
+    border-color: blue;
+}
+
+.aceptar{
+    margin-left: 120px;
+}
+
+button:hover{
+    background-color: rgb(57, 116, 213);
+    border-color: rgb(57, 116, 213);
+}
+
+input{
+    color:black !important;
+    background: white;
+    width: 80% !important;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: white;
+}

@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path
 
 from configuracion.views import ControlAmbiente
-from gestionAdministrativa.views import ControlUsuario
+from gestionAdministrativa.views import ControlAutenticacion
+from gestionAdministrativa.views import loginView, recuperarContraView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('crearambiente/', ControlAmbiente.as_view()),
-    path('login/', ControlUsuario.as_view()),
+    path('login/', loginView),
+    path('recuperarContraseña/', recuperarContraView),
 ]
 
 admin.site.site_header = "Administración de Bugevents"
