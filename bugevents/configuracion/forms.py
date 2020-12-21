@@ -1,12 +1,12 @@
 from datetime import date
 
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, DateInput
 from django.core.exceptions import ValidationError
 
-from .models import Ambiente, Evento, Turno, Material
-
+from .models import *
 
 '''
+Código: CFG02
 EventoForm -> Creacion, modificacion y validacion de Eventos
 Clase relacionada -> CD85 [Control]
 Casos de Uso relacionados -> {BE04, BE05}
@@ -15,6 +15,10 @@ class EventoForm(ModelForm):
     class Meta:
         model = Evento
         fields = '__all__'
+        widgets = {
+            'fecha_inicio': DateInput(attrs={'class': 'datepicker'}),
+            'fecha_fin': DateInput(attrs={'class': 'datepicker'}),
+        }
 
     def clean(self):
         fecha_inicio = self.cleaned_data.get('fecha_inicio')
@@ -24,8 +28,8 @@ class EventoForm(ModelForm):
         if fecha_inicio > fecha_fin:
             raise ValidationError("La fecha de inicio no puede ser posterior a la fecha de fin.")
 
-
 '''
+Código: CFG03
 AmbienteForm -> Creacion, modificacion y validacion de Ambientes
 Clase relacionada -> CD25 [Control]
 Casos de Uso relacionados -> {BE07, BE08}
@@ -46,6 +50,7 @@ class AmbienteForm(ModelForm):
 
 
 '''
+Código: CFG06
 TurnoForm -> Formulario de creacion de Turnos
 Clase relacionada -> CD45 [Control]
 Casos de Uso relacionados -> {BE12}
@@ -63,14 +68,47 @@ class TurnoForm(ModelForm):
 
 
 '''
-MaterialForm -> Formulario de creacion, modificacion y validacion de Materiales
-clase relacionada -> CD46 [Control]
-Casos de uso relacionados -> {BE13, BE14}
+MaterialForm -> Formulario de creacion de Materiales
+Clase relacionada -> CD [Control]
+Casos de Uso relacionados -> {}
 '''
 class MaterialForm(ModelForm):
     class Meta:
         model = Material
         fields = '__all__'
 
+
+'''
+Código: CFG05
+ActividadForm -> Formulario de creacion de Actividades
+Clase relacionada -> CD02 [Control]
+Casos de Uso relacionados -> {BE10, BE11}
+'''
+class ActividadForm(ModelForm):
+    class Meta:
+        model = Actividad
+        fields = '__all__'
+        widgets = {
+            'ctlgos_restantes': TextInput(attrs={"type": "number",
+                                      "min": "1"})
+        }
+
     def clean(self):
-        descripcion = self.cleaned_data.get('descripcion')
+        c_restantes = self.cleaned_data.get('ctlgos_restantes')
+        if c_restantes < 1:
+            raise ValidationError("El valor de los catalogos debe ser un número positivo.")
+
+
+class ItemForm(ModelForm):
+    class Meta:
+        model = Item
+        fields = '__all__'
+        widgets = {
+            'cantidad': TextInput(attrs={"type": "number",
+                                      "min": "1"})
+        }
+
+    def clean(self):
+        cantidad = self.cleaned_data.get('cantidad')
+        if cantidad < 1:
+            raise ValidationError("La cantidad debe ser un número positivo.")

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Ambiente, Evento, Actividad, Ponente, Turno, Material
-from .forms import AmbienteForm, EventoForm, TurnoForm, MaterialForm
+from .models import *
+from .forms import *
 
 
 class AmbienteAdmin(admin.ModelAdmin):
@@ -11,6 +11,7 @@ admin.site.register(Ambiente, AmbienteAdmin)
 
 class ActividadInline(admin.TabularInline):
     model = Actividad
+    form = ActividadForm
     show_change_link = True
 
 
@@ -31,21 +32,30 @@ class TurnoAdmin(admin.ModelAdmin):
 admin.site.register(Turno, TurnoAdmin)
 
 
-class MaterialAdmin(admin.ModelAdmin):
-    form = MaterialForm
-admin.site.register(Material,MaterialAdmin)
-
-
 class TurnoInline(admin.TabularInline):
     model = Turno
+    show_change_link = True
 
 
 class ActividadAdmin(admin.ModelAdmin):
     model = Actividad
+    form = ActividadForm
     inlines = [TurnoInline]
 
     def get_model_perms(self, request):
         return {}
-
-
 admin.site.register(Actividad, ActividadAdmin)
+
+
+admin.site.register(Material)
+
+
+class ItemInline(admin.TabularInline):
+    model = Item
+    form = ItemForm
+    show_change_link = True
+
+    
+class CatalogoAdmin(admin.ModelAdmin):
+    inlines  = [ItemInline]
+admin.site.register(Catalogo, CatalogoAdmin)

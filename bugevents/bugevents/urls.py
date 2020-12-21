@@ -14,17 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.views.generic.base import RedirectView
+from administracion import views as administracion_views
 
-from configuracion.views import ControlAmbiente
+#from configuracion.views import ControlAmbiente
 from gestionAdministrativa.views import ControlAutenticacion
 from gestionAdministrativa.views import loginView, recuperarContraView
 
 urlpatterns = [
+    path('', administracion_views.loginPage),
     path('admin/', admin.site.urls),
-    path('crearambiente/', ControlAmbiente.as_view()),
-    path('login/', loginView),
-    path('recuperarContraseña/', recuperarContraView),
+    path('administracion/', include('administracion.urls')),
+    path('administracion/configuracion/', include('configuracion.urls')),
 ]
 
 admin.site.site_header = "Administración de Bugevents"
